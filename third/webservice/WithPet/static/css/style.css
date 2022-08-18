@@ -354,7 +354,7 @@ a:hover {
 
 .post-content-input {
   width: 1150px;
-  margin-top: 134px;
+  margin-top: 254px;
   margin-left: 385px;
   margin-right: 385px;
 
@@ -375,7 +375,7 @@ a:hover {
 .course-box-container {
   position: absolute;
   width: 1200px;
-  height: 506px;
+  /* height: 506px; */
   left: 360px;
   top: 287px;
 
@@ -402,6 +402,7 @@ a:hover {
 .course-container {
   width: 282px;
   height: 239px;
+  margin-bottom: 20px;
 }
 
 .post {
@@ -916,4 +917,10 @@ a:hover {
 
 .my-body {
   margin-bottom: 220px;
+}
+
+.post-main-photo {
+  margin-top: 13px;
+  margin-left: 385px;
+  font-size: 12px;
 }
