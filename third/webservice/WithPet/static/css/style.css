@@ -354,14 +354,28 @@ a:hover {
 
 .post-content-input {
   width: 1150px;
+  min-height: 350px;
+  padding: 10px;
+
   margin-top: 254px;
   margin-left: 385px;
-  margin-right: 385px;
 
   background: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
-  padding-left: 4px;
+
+  resize: none;
+  font-size: 13px;
+}
+
+.post-content {
+  width: 1150px;
+  min-height: 350px;
+  padding: 10px;
+
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
 
   resize: none;
   font-size: 13px;
@@ -374,7 +388,7 @@ a:hover {
 
 .course-box-container {
   position: absolute;
-  width: 1200px;
+  width: 1224px;
   /* height: 506px; */
   left: 360px;
   top: 287px;
@@ -382,7 +396,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .my-container {
@@ -403,6 +417,7 @@ a:hover {
   width: 282px;
   height: 239px;
   margin-bottom: 20px;
+  margin-right: 24px;
 }
 
 .post {
