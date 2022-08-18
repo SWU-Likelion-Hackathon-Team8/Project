@@ -14,58 +14,60 @@
     />
   </head>
   <body>
-    <div id="header" class="navbar">
-      <a href="/" id="hd-main-logo" class="clear-a"
-        ><img src="{% static 'img/logo.png' %}"
-      /></a>
-      <form class="d-flex" role="search">
-        <input
-          class="search-bar me-2"
-          type="search"
-          placeholder="검색어를 입력해주세요."
-          aria-label="Search"
-        />
-        <button type="submit" id="ic-search" class="clear-btn">
-          <img src="{% static 'img/search.png' %}" alt="검색" />
-        </button>
-      </form>
-      <div id="hd-mypage">
-        <a href="/mypage" class="clear-a">마이페이지</a>
-      </div>
-    </div>
-    <div class="post-w-desc">OO님만의 여행 코스를 소개해주세요!</div>
-    <form method="POST">
-      {% csrf_token %}
-      <div id="post-condition-container">
-        <div class="flex-left">
-          <p class="sep-text">제목</p>
+    <div class="new_post-wrapper">
+      <div id="header" class="navbar">
+        <a href="/" id="hd-main-logo" class="clear-a"
+          ><img src="{% static 'img/logo.png' %}"
+        /></a>
+        <form class="d-flex" role="search">
           <input
-            type="text"
-            class="post-title-input"
-            placeholder=""
-            name="postname"
+            class="search-bar me-2"
+            type="search"
+            placeholder="검색어를 입력해주세요."
+            aria-label="Search"
           />
-          <p class="sep-text">지역</p>
-          <input type="text" class="course-region" placeholder="제주도" />
-          <p class="sep-text">기간</p>
-          <input type="text" class="course-region" placeholder="당일치기" />
+          <button type="submit" id="ic-search" class="clear-btn">
+            <img src="{% static 'img/search.png' %}" alt="검색" />
+          </button>
+        </form>
+        <div id="hd-mypage">
+          <a href="/mypage" class="clear-a">마이페이지</a>
         </div>
       </div>
-      <div class="sep-line-post"></div>
-      <div class="post-w-container">
-        <textarea
-          id="post-content"
-          cols="30"
-          rows="25"
-          class="post-content-input"
-          name="contents"
-        ></textarea>
-        <input type="file" name="mainphoto" class="post-main-photo" />
-        <div>
-          <button type="submit" class="btn-post" value="글쓰기">등록</button>
+      <div class="post-w-desc">OO님만의 여행 코스를 소개해주세요!</div>
+      <form method="POST">
+        {% csrf_token %}
+        <div id="post-condition-container">
+          <div class="flex-left">
+            <p class="sep-text">제목</p>
+            <input
+              type="text"
+              class="post-title-input"
+              placeholder=""
+              name="postname"
+            />
+            <p class="sep-text">지역</p>
+            <input type="text" class="course-region" placeholder="제주도" />
+            <p class="sep-text">기간</p>
+            <input type="text" class="course-region" placeholder="당일치기" />
+          </div>
         </div>
-      </div>
-    </form>
+        <div class="sep-line-post"></div>
+        <div class="post-w-container">
+          <textarea
+            id="post-content"
+            cols="30"
+            rows="25"
+            class="post-content-input"
+            name="contents"
+          ></textarea>
+          <input type="file" name="mainphoto" class="post-main-photo" />
+          <div>
+            <button type="submit" class="btn-post" value="글쓰기">등록</button>
+          </div>
+        </div>
+      </form>
+    </div>
     <footer>위드펫 WithPet | LikeLion 10th SWU Team8</footer>
 
     <script

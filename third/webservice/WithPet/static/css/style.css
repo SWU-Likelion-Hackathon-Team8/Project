@@ -504,11 +504,15 @@ a:hover {
 
 .spot-ex-img {
   margin: 19px 27px 19px 24px;
+  width: 282px;
+  height: auto;
+  overflow: hidden;
 }
 
 .spot-detail-ex-img {
   margin-left: 29px;
   padding-right: 20px;
+  width: 538px;
 }
 
 .spot-title {
@@ -950,7 +954,15 @@ a:hover {
 }
 
 .spot-wrapper {
-  height: 1700px;
+  height: 1200px;
+}
+
+.new_post-wrapper {
+  height: 1000px;
+}
+
+.posting-wrapper {
+  height: 1100px;
 }
 
 footer {
