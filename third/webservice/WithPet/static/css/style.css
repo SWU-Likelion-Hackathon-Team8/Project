@@ -184,6 +184,8 @@ a:hover {
 
   background: #eaeaea;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
 }
 
 #ic-map {
@@ -933,4 +935,42 @@ a:hover {
   margin-top: 13px;
   margin-left: 385px;
   font-size: 12px;
+}
+
+.course-wrapper {
+  height: 1024px;
+}
+
+.index-wrapper {
+  height: 1000px;
+}
+
+.spot-detail-wrapper {
+  height: 1300px;
+}
+
+.spot-wrapper {
+  height: 1700px;
+}
+
+footer {
+  height: 52px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  background: #fcf8e8;
+  line-height: 52px;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 1.25rem;
+  left: 15%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgb(65, 65, 65);
+  text-align: center;
 }

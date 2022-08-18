@@ -5,66 +5,110 @@
     <title>위드펫</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{% static 'css/style.css' %}?after " rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link href="{% static 'css/style.css' %}?after" rel="stylesheet" />
   </head>
   <body>
-    <div id="header" class="navbar">
-      <a href="/" id="hd-main-logo" class="clear-a"
-        ><img src="{% static 'img/logo.png' %}"
-      /></a>
-      <form class="d-flex" role="search">
-        <input
-          class="search-bar me-2"
-          type="search"
-          placeholder="검색어를 입력해주세요."
-          aria-label="Search"
-        />
-        <button type="submit" id="ic-search" class="clear-btn">
-          <img src="{% static 'img/search.png'%}" alt="검색" />
+    <div class="index-wrapper">
+      <div id="header" class="navbar">
+        <a href="/" id="hd-main-logo" class="clear-a"
+          ><img src="{% static 'img/logo.png' %}"
+        /></a>
+        <form class="d-flex" role="search">
+          <input
+            class="search-bar me-2"
+            type="search"
+            placeholder="검색어를 입력해주세요."
+            aria-label="Search"
+          />
+          <button type="submit" id="ic-search" class="clear-btn">
+            <img src="{% static 'img/search.png'%}" alt="검색" />
+          </button>
+        </form>
+        <div id="hd-login"><a href="./login.html" class="clear-a">로그인</a></div>
+        <div id="hd-signup">
+          <a href="./signup.html" class="clear-a">회원가입</a>
+        </div>
+      </div>
+      <div id="where-to-go">OO이와 함께 <br />어디로 떠나고 싶으신가요?</div>
+      <div id="box">
+        <div id="ic-map">
+          <img
+            src="{% static 'img/map.png'%}"
+            alt="지도"
+            width="30"
+            height="30"
+          />
+        </div>
+        <form id="search-bar" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="가고싶은 지역을 입력하세요."
+            aria-label="Search"
+          />
+        </form>
+        <div class="line"></div>
+        <button
+          type="button"
+          id="btn-course"
+          onClick="location.href='/blog/'"
+        >
+          다른 사람들의 반려동물 동반 여행 코스 둘러보기
         </button>
-      </form>
-      <div id="hd-login"><a href="./login.html" class="clear-a">로그인</a></div>
-      <div id="hd-signup">
-        <a href="./signup.html" class="clear-a">회원가입</a>
+        <button type="button" id="btn-spot" onClick="location.href='/spot'">
+          반려동물 동반 가능 스팟 찾기
+        </button>
+      </div>
+      <div id="service-desc">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'img/carousel_03.jpeg' %}" class="d-block w-100" alt="..." width="auto" height="573">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>사랑하는 나의 반려동물과 함께 떠나보세요!</h5>
+                <p>반려동물 동반 가능한 장소와 제공하는 서비스를 한눈에 확인할 수 있어요.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/carousel_02.jpeg' %}" class="d-block w-100" alt="..." width="auto" height="573">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>같이 여행하고 싶은데, 좋은 곳 없을까?</h5>
+                <p>다른 사람들의 반려동물 동반 여행 코스를 볼 수 있어요.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/carousel_01.jpg' %}" class="d-block w-100" alt="..." width="auto" height="573">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>함께해서 행복한 순간들</h5>
+                <p>사소했던 일상이 더욱 특별해질 거예요.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
-    <div id="where-to-go">OO이와 함께 <br />어디로 떠나고 싶으신가요?</div>
-    <div id="box">
-      <div id="ic-map">
-        <img
-          src="{% static 'img/map.png'%}"
-          alt="지도"
-          width="30"
-          height="30"
-        />
-      </div>
-      <form id="search-bar" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="가고싶은 지역을 입력하세요."
-          aria-label="Search"
-        />
-      </form>
-      <div class="line"></div>
-      <button
-        type="button"
-        id="btn-course"
-        onClick="location.href='/blog/'"
-      >
-        다른 사람들의 반려동물 동반 여행 코스 둘러보기
-      </button>
-      <button type="button" id="btn-spot" onClick="location.href='/spot'">
-        반려동물 동반 가능 스팟 찾기
-      </button>
-    </div>
-    <div id="service-desc">서비스 소개 캐러셀</div>
+    <footer>
+      위드펫 WithPet | LikeLion 10th SWU Team8
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
