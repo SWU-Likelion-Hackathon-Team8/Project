@@ -27,6 +27,16 @@ def posting(request, pk):
     return render(request, 'main/posting.html', {'post':post})
 
 
+# spot.html
+def spot(request):
+    return render(request, 'main/spot.html')
+
+def spot_detail(request):
+    return render(request, 'main/spot_detail.html')
+
+def my_page(request):
+    return render(request, 'main/mypage.html')
+
 #글쓰기
 
 def new_post(request):

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <title>위드펫</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'css/style.css' %}?after" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="header" class="navbar">
+      <a href="/" id="hd-main-logo" class="clear-a">
+        <img src="{% static 'img/logo.png' %}"
+        /></a>
+      <form class="d-flex" role="search">
+        <input
+          class="search-bar me-2"
+          type="search"
+          placeholder="검색어를 입력해주세요."
+          aria-label="Search"
+        />
+        <button type="submit" id="ic-search" class="clear-btn">
+          <img src="{% static 'img/search.png' %}" alt="검색" />
+        </button>
+      </form>
+      <div id="hd-mypage">
+        <a href="/mypage" class="clear-a">마이페이지</a>
+      </div>
+    </div>
+    <div id="spot-condition-container">
+      <div class="flex-left">
+        <p class="sep-text">지역</p>
+        <input type="text" class="course-region" placeholder="제주도" />
+        <p class="sep-text">분류</p>
+        <button type="button" class="btn-category" id="selected-cat-btn">
+          카페
+        </button>
+        <button type="button" class="btn-category">식당</button>
+        <button type="button" class="btn-category">숙소</button>
+        <button type="button" class="btn-category mg">레저</button>
+        <p class="sep-text">서비스</p>
+        <img
+        src="{% static 'img/service01.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      <img
+        src="{% static 'img/service02.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      <img
+        src="{% static 'img/service03.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      <img
+        src="{% static 'img/service02.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      <img
+        src="{% static 'img/service01.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      <img
+        src="{% static 'img/service03.png' %}"
+        alt=""
+        width="36"
+        height="36"
+        class="service-img"
+      />
+      </div>
+      <div class="flex-right">
+        <a href="/blog" class="clear-a" id="selected-course">코스</a>
+        <p class="slash-line">|</p>
+        <a href="/spot" class="clear-a" id="selected-spot">스팟</a>
+      </div>
+    </div>
+    <div class="sep-line"></div>
+    <!-- spot 상세 정보 -->
+    <div class="spot-box-container">
+      <div class="spot-detail-container">
+        <div class="spot-detail-info-container">
+          <div class="spot-detail-title">
+            <p class="spot-title-text">도그어바웃</p>
+            <img
+              src="{% static 'img/heart.png' %}"
+              alt=""
+              class="flex-right ic-pos"
+              width="20"
+              height="20"
+            />
+          </div>
+          <div class="spot-detail-sep-line"></div>
+          <div class="spot-info">
+            <div class="d-flex">
+              <img src="{% static 'img/marker.png'%}" alt="" width="18" height="18" />
+              <p class="info-text">부산 사하구 다대로 680</p>
+            </div>
+            <div class="d-flex">
+              <img src="{% static 'img/clock.png' %}" alt="" width="18" height="18" />
+              <p class="info-text">매일 11:00~22:00</p>
+            </div>
+            <div class="d-flex">
+              <img src="{% static 'img/phone.png' %}" alt="" width="18" height="18" />
+              <p class="info-text">051-261-5507</p>
+            </div>
+            <img
+            src="{% static 'img/service01.png' %}"
+            alt=""
+            width="36"
+            height="36"
+            class="service-img"
+            />
+            <img
+              src="{% static 'img/service02.png' %}"
+              alt=""
+              width="36"
+              height="36"
+              class="service-img"
+            />
+            <img
+              src="{% static 'img/service03.png' %}"
+              alt=""
+              width="36"
+              height="36"
+              class="service-img"
+            />
+            <img
+              src="{% static 'img/service02.png' %}"
+              alt=""
+              width="36"
+              height="36"
+              class="service-img"
+            />
+            <img
+              src="{% static 'img/service01.png' %}"
+              alt=""
+              width="36"
+              height="36"
+              class="service-img"
+            />
+            <img
+              src="{% static 'img/service03.png' %}"
+              alt=""
+              width="36"
+              height="36"
+              class="service-img"
+            />
+          </div>
+          <a href="blog" class="clear-a">
+            <div class="d-flex go-to-course">
+              <img src="{% static 'img/go-to-course.png' %}" alt="" width="18" height="18" />
+              <p class="info-text">이 스팟을 포함하는 여행 코스 보러가기</p>
+            </div>
+          </a>
+        </div>
+        <img
+          src="{% static 'img/map-example.png' %}"
+          alt=""
+          class="spot-detail-ex-img"
+          width="538"
+          height="416"
+        />
+      </div>
+    </div>
+    <div class="review-container">
+      <h5 class="review-title">한 줄 후기</h5>
+      <div class="review-comment-container">
+        <div class="review-comment">
+          <div class="reviewer-info">
+            <img src="{% static 'img/profile-img.png' %}" alt="" width="33" height="33" />
+            <div class="reviewer-nick">
+              몽몽
+              <p class="review-comment-time">2022.08.08 13:15</p>
+            </div>
+          </div>
+          <div class="review-comment-content">
+            우리 몽이가 너무 즐겁게 뛰어놀아서 데려가길 잘 했다고 생각했어요! :)
+            다음에도 또 데려가려고요 (댓글1)
+          </div>
+        </div>
+        <div class="review-comment">
+          <div class="reviewer-info">
+            <img src="{% static 'img/profile-img.png' %}" alt="" width="33" height="33" />
+            <div class="reviewer-nick">
+              몽몽
+              <p class="review-comment-time">2022.08.08 13:15</p>
+            </div>
+          </div>
+          <div class="review-comment-content">
+            우리 몽이가 너무 즐겁게 뛰어놀아서 데려가길 잘 했다고 생각했어요! :)
+            다음에도 또 데려가려고요 (댓글2)
+          </div>
+        </div>
+        <div class="review-comment">
+          <div class="reviewer-info">
+            <img src="{% static 'img/profile-img.png' %}" alt="" width="33" height="33" />
+            <div class="reviewer-nick">
+              몽몽
+              <p class="review-comment-time">2022.08.08 13:15</p>
+            </div>
+          </div>
+          <div class="review-comment-content">
+            우리 몽이가 너무 즐겁게 뛰어놀아서 데려가길 잘 했다고 생각했어요! :)
+            다음에도 또 데려가려고요 (댓글3)
+          </div>
+        </div>
+        <div class="review-comment">
+          <div class="reviewer-info">
+            <img src="{% static 'img/profile-img.png' %}" alt="" width="33" height="33" />
+            <div class="reviewer-nick">
+              몽몽
+              <p class="review-comment-time">2022.08.08 13:15</p>
+            </div>
+          </div>
+          <div class="review-comment-content">
+            우리 몽이가 너무 즐겁게 뛰어놀아서 데려가길 잘 했다고 생각했어요! :)
+            다음에도 또 데려가려고요 (댓글4)
+          </div>
+        </div>
+      </div>
+      <div class="review-write">
+        <div class="review-comment-w">
+          <div class="reviewer-info">
+            <img src="{% static 'img/profile-img.png' %}" alt="" width="33" height="33" />
+            <div class="reviewer-nick">몽몽</div>
+          </div>
+          <div class="review-comment-write">
+            <input
+              type="text"
+              class="review-comment-input"
+              placeholder="후기를 공유해주세요."
+            />
+            <button type="submit" class="review-up">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/top-nav.js' %}"></script>
+  </body>
+</html>

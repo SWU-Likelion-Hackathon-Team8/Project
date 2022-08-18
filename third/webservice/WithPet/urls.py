@@ -14,7 +14,7 @@ from .views import *
 from django.contrib import admin
 from django.urls import path
 # index는 대문, blog는 게시판
-from WithPet.views import index, blog, posting
+from WithPet.views import index, blog, posting, spot
 
 
 
@@ -39,6 +39,10 @@ urlpatterns=[
     path('blog/new_post/', new_post),
     ##삭제 버튼
     path('blog/<int:pk>/remove/', remove_post),
+
+    path('spot/', spot, name='spot'),
+    path('spot-detail', spot_detail, name='spot-detail'),
+    path('mypage/', my_page, name='mypage')
 ]
 
 # 이미지 URL 설정
