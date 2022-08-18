@@ -15,7 +15,9 @@
   </head>
   <body>
     <div id="header" class="navbar">
-      <a href="/" id="hd-main-logo" class="clear-a">위드펫</a>
+      <a href="/" id="hd-main-logo" class="clear-a"
+        ><img src="{% static 'img/logo.png' %}"
+      /></a>
       <form class="d-flex" role="search">
         <input
           class="search-bar me-2"
@@ -38,7 +40,13 @@
       </div>
       <div class="edit-btn-container">
         <button type="button" class="btn-post-edit">수정</button>
-        <button type="button" class="btn-post-edit" onClick="location.href='/blog/{{post.pk}}/remove'">삭제</button>
+        <button
+          type="button"
+          class="btn-post-edit"
+          onClick="location.href='/blog/{{post.pk}}/remove'"
+        >
+          삭제
+        </button>
       </div>
     </div>
     <div id="post-condition-container">
@@ -55,7 +63,7 @@
       {% comment %} 사진 안 뜸 {% endcomment %}
       <!-- 이미지 보여주기 -->
       {% if post.mainphoto %}
-        <img src = "{{ post.mainphoto.url }}" alt="" height="600">
+      <img src="{{ post.mainphoto.url }}" alt="" height="600" />
       {% endif%}
 
       <div class="post-content">{{post.contents}}</div>
@@ -94,7 +102,12 @@
         </div>
         <div class="comments">
           <div class="comment-info">
-            <img src="{% static 'img/profile-img.png'%}" alt="" width="33" height="33" />
+            <img
+              src="{% static 'img/profile-img.png'%}"
+              alt=""
+              width="33"
+              height="33"
+            />
             <div class="comment-nick">
               몽몽
               <p class="comment-time">2022.08.08 13:15</p>
@@ -109,7 +122,12 @@
         <div class="comment-sep-line"></div>
         <div class="comments">
           <div class="comment-info">
-            <img src="{% static 'img/profile-img.png'%}" alt="" width="33" height="33" />
+            <img
+              src="{% static 'img/profile-img.png'%}"
+              alt=""
+              width="33"
+              height="33"
+            />
             <div class="comment-nick">
               몽몽
               <p class="comment-time">2022.08.08 13:15</p>
@@ -124,7 +142,12 @@
         <div class="comment-sep-line"></div>
         <div class="comments">
           <div class="comment-info">
-            <img src="{% static 'img/profile-img.png'%}" alt="" width="33" height="33" />
+            <img
+              src="{% static 'img/profile-img.png'%}"
+              alt=""
+              width="33"
+              height="33"
+            />
             <div class="comment-nick">
               몽몽
               <p class="comment-time">2022.08.08 13:15</p>
@@ -144,6 +167,5 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="./top-nav.js"></script>
   </body>
 </html>

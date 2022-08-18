@@ -5,7 +5,7 @@
     <title>위드펫</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}?after " rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,7 +15,9 @@
   </head>
   <body>
     <div id="header" class="navbar">
-      <a href="/" id="hd-main-logo" class="clear-a">위드펫</a>
+      <a href="/" id="hd-main-logo" class="clear-a"
+        ><img src="{% static 'img/logo.png' %}"
+      /></a>
       <form class="d-flex" role="search">
         <input
           class="search-bar me-2"
@@ -54,7 +56,16 @@
       <button
         type="button"
         id="btn-course"
-        {% comment %} blog로 이동 안함 why? {% endcomment %}
+        {%
+        comment
+        %}
+        blog로
+        이동
+        안함
+        why?
+        {%
+        endcomment
+        %}
         onClick="location.href='/blog/'"
       >
         다른 사람들의 반려동물 동반 여행 코스 둘러보기

@@ -62,13 +62,8 @@ a:hover {
 
 #hd-main-logo {
   position: absolute;
-  left: 90px;
-  top: 19px;
-
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
+  left: 75px;
+  top: 13px;
   line-height: 27px;
   display: flex;
   align-items: center;
