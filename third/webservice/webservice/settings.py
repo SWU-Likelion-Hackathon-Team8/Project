@@ -137,3 +137,6 @@ LOGIN_REDIRECT_URL = '/blog'
 
 # 로그아웃 성공 시 자동으로 이동할 URL
 LOGOUT_REDIRECT_URL = '/blog'
+
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".cloudtype.app"]
+CSRF_TRUSTED_ORIGINS = ['https://*.cloudtype.app']
