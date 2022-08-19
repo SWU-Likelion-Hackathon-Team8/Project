@@ -30,12 +30,22 @@
             <img src="{% static 'img/search.png' %}" alt="검색" />
           </button>
         </form>
+        {% if user.is_authenticated %}
+          <div id="hd-login">
+            <a href="{% url 'users:logout' %}" class="clear-a">로그아웃</a>
+          </div>
+          <div id="hd-signup">
+            <a href="/mypage" class="clear-a">마이페이지</a>
+          </div>
+        {% else %}
         <div id="hd-login">
-          <a href="#" class="clear-a">로그아웃</a>
+          <a href="{% url 'login' %}" class="clear-a">로그인</a>
         </div>
         <div id="hd-signup">
-          <a href="/mypage" class="clear-a">마이페이지</a>
+          <a href="./signup.html" class="clear-a">회원가입</a>
         </div>
+        {% endif %}
+
       </div>
       <div id="course-condition-container">
         <div class="flex-left">

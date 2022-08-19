@@ -12,7 +12,7 @@ def login(request):
         user = auth.authenticate(request, username=userid, password=pwd)
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('blog')
         else:
             return render(request, 'login.html')
 

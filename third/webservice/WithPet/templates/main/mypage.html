@@ -45,7 +45,11 @@
         />
         <div class="profile-info-container">
           <div>
+            {% if user.is_authenticated %}
+            <span class="profile-nick">{{ user.username }}</span>
+            {% else %}
             <span class="profile-nick">몽몽</span>
+            {% endif %}
             <button type="button" class="btn-profile-edit">프로필 수정</button>
           </div>
           <div class="profile-introduction">
