@@ -22,9 +22,6 @@ from WithPet.views import index, blog, posting, spot
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-#app_name='main'
-
 urlpatterns=[
     #path('',index),
     #path('blog/',blog),
@@ -42,7 +39,7 @@ urlpatterns=[
 
     path('spot/', spot, name='spot'),
     path('spot-detail', spot_detail, name='spot-detail'),
-    path('mypage/', my_page, name='mypage')
+    path('mypage/', my_page, name='mypage'),
 ] 
 
 # 이미지 URL 설정
