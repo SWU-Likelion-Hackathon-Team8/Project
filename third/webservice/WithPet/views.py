@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 # View에 Model(Post 게시글) 가져오기
-from .models import Post
+from .models import Post, Photo
 
 
 # Create your views here.

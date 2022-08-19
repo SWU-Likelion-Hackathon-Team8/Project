@@ -12,15 +12,15 @@
 from .views import *
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 # index는 대문, blog는 게시판
 from WithPet.views import index, blog, posting, spot
 
 
 
 # 이미지를 업로드하자
-from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.static import static
 
 
 #app_name='main'
@@ -43,7 +43,7 @@ urlpatterns=[
     path('spot/', spot, name='spot'),
     path('spot-detail', spot_detail, name='spot-detail'),
     path('mypage/', my_page, name='mypage')
-]
+] 
 
 # 이미지 URL 설정
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

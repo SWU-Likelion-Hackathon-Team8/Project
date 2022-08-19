@@ -68,7 +68,11 @@
         </div>
       </form>
     </div>
-    <footer>위드펫 WithPet | LikeLion 10th SWU Team8</footer>
+
+    {% for photo in post.photo_set.all %}
+    <img src="{{ photo.image.url }}" width="50" /><br />
+    {% endfor %}
+    <footer>위드펫 WithPet | LikeLion 10th SWU Team5</footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

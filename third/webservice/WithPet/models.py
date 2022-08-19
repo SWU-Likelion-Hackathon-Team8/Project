@@ -14,3 +14,8 @@ class Post(models.Model):
      # 게시글의 제목(postname)이 Post object 대신하기
     def __str__(self):
         return self.postname
+
+
+class Photo(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
